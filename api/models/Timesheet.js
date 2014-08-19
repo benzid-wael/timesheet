@@ -9,13 +9,15 @@ module.exports = {
 
   attributes: {
     task: {
-      model: 'task'
+      model: 'task',
+      required: true
     },
     duration: 'float',
     unit: {
       type: 'string',
       enum: ['day', 'hour', 'minute']
     },
+    date: 'datetime',
 
     getTimeSpentString: function() {
       return this.duration + ' ' + this.unit
