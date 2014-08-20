@@ -14,7 +14,9 @@
 //
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
-var cssFilesToInject = [
+var cssFilesToInject = [  
+  'styles/bootstrap.css',
+  'styles/bootstrap-theme.css',
   'styles/**/*.css'
 ];
 
@@ -22,12 +24,21 @@ var cssFilesToInject = [
 // Client-side javascript files to inject in order
 // (uses Grunt-style wildcard/glob/splat expressions)
 var jsFilesToInject = [
-  
   // Load sails.io before everything else
   'js/dependencies/sails.io.js',
 
+  'js/dependencies/angular.js',
+  'js/dependencies/angular-route.js',
+  'js/dependencies/jquery.js',
+
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
+
+  'js/app.js',
+  'js/services.js',
+  'js/controllers.js',
+  'js/filters.js',
+  'js/directives.js',
 
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
@@ -47,6 +58,7 @@ var jsFilesToInject = [
 var templateFilesToInject = [
   'templates/**/*.html'
 ];
+
 
 
 
