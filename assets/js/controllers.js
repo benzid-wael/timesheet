@@ -3,9 +3,11 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-  .controller('MyCtrl1', ['$scope', function($scope) {
-
+  .controller('TaskListCtrl', ['$scope', 'Task', function($scope, Task) {
+      $scope.tasks = Task.query();
   }])
-  .controller('MyCtrl2', ['$scope', function($scope) {
-
+  .controller('TaskDetailCtrl', ['$scope', '$routeParams', 'Task', function($scope, $routeParams, Task) {
+      $scope.task = Task.get({taskId: $routeParams.taskId}, function(task) {
+          // TODO get Timesheet data
+      });
   }]);
