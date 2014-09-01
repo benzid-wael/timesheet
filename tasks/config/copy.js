@@ -23,14 +23,19 @@ module.exports = function(grunt) {
 								 cwd: './assets',
 								 src: ['**/*.!(coffee|less)'],
 								 dest: '.tmp/public'
-						 },{ 
+						 },{
 								 expand: true,
 								 cwd: './bower_components',
 								 src: [
 								// add angular js
-								 'angular/angular.js', 'angular-route/angular-route.js','angular-mocks/angular-mocks.js', 'angular-loader/angular-loader.js',
+								 'angular/angular.js',
+                 'angular-route/angular-route.js',
+                 'angular-resource/angular-resource.js',
+                 'angular-mocks/angular-mocks.js',
+                 'angular-loader/angular-loader.js',
 								 // add bootstrap & jquery js
-								 'bootstrap/dist/js/boostrap.js','jquery/dist/jquery.js'
+								 'bootstrap/dist/js/boostrap.js',
+                 'jquery/dist/jquery.js'
 								 ],
 								 flatten: true,
 								 dest: '.tmp/public/js/dependencies'

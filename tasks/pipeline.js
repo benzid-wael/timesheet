@@ -14,7 +14,7 @@
 //
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
-var cssFilesToInject = [  
+var cssFilesToInject = [
   'styles/bootstrap.css',
   'styles/bootstrap-theme.css',
   'styles/**/*.css'
@@ -29,6 +29,7 @@ var jsFilesToInject = [
 
   'js/dependencies/angular.js',
   'js/dependencies/angular-route.js',
+  'js/dependencies/angular-resource.js',
   'js/dependencies/jquery.js',
 
   // Dependencies like jQuery, or Angular are brought in here
