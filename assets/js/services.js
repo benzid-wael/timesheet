@@ -10,7 +10,7 @@ angular.module('myApp.services', []).
 
 var taskServices = angular.module('taskServices', ['ngResource']);
 
-phonecatServices.factory('Task', ['$resource',
+taskServices.factory('Task', ['$resource',
   function($resource){
     return $resource('task/:taskId', {}, {
       query: {method:'GET', params:{taskId:'tasks'}, isArray:true}
